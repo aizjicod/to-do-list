@@ -6,8 +6,74 @@
 
 body {
   background: blueviolet;
+  display: flex;
+  justify-content: center;
 }
 
-.hello {
-  color: red;
+/* container */
+
+.todo-container {
+  margin-top: 50px;
+  background: #fff;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 5px 5px 5px #aaa;
+}
+
+.todo-container > * {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #aaa;
+}
+
+/* title container */
+.title-todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* form container */
+
+.form-todo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-todo .input-form {
+  border: none;
+  outline: none;
+  padding: 3px;
+}
+
+/* list container */
+
+.list-container {
+  border: none;
+  list-style: none;
+  padding: 0;
+}
+
+.list-container > * {
+  border-bottom: 1px solid #aaa;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-container .span {
+  width: 80%;
+}
+
+/* clear all container */
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.clear-btn {
+  border: none;
+  background: inherit;
+  font-size: 1.3em;
 }

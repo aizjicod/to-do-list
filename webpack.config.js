@@ -4,20 +4,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
   },
   devtool: 'inline-source-map',
- devServer: {
-   static: './dist',
- },
- module: {
-  rules: [
-    {
-      test: /\.css$/i,
-      use: ['style-loader', 'css-loader'],
-    },
-  ],
-},
+  devServer: {
+    static: './dist',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
@@ -29,7 +29,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
- optimization: {
-   runtimeChunk: 'single',
- },
+  optimization: {
+    runtimeChunk: 'single',
+  },
 };
