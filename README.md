@@ -1,11 +1,14 @@
-# Webpack boilerplate
+# to-do list project
 
-> on this project a will be doing a template so is easier to use a webpack
+> on this project i will be doing a to do list which will be created with a template of webpack.
 
 
 ## Built With
 
 - webpack
+- javaScript
+- HTML
+- CSS
 
 ## Getting Started
 
@@ -15,26 +18,32 @@
     before starting be sure to have a code editor (any works).
     be sure to have in your locar computer git desktop or bash any works. this will help when cloning the repository.
 ### Setup
-    grab the link of this proyect, this can be found on the page of the repository, in order to clone it later on.
+    grab the link of this proyect, this can be found on the page of the repository.
+    put this line of code in you terminal on the directory you want to.
+    ``bash
+    git clone [url of the project](git@github.com:aizjicod/to-do-list.git)
 ### Install
-    on your command console write "git clone <link of the repo>". it should download everything on this proyect
+   once you have cloned the repository open it on your code editor of preference and then follow the next steps.
+   - run on your terminal the next line of code 
+   `npm install`
 ### Usage
-    run it on your code editor.
+    when you have installed the dependencies, you can now run the repository in your terminal run the next line of code.
+    `npm start`
 
 ## Authors
 
 👤 **Alejandro torres**
 
-- GitHub: [@githubhandle](https://github.com/aizjicod)
-- Twitter: [@twitterhandle](https://twitter.com/aizijijr)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aiziji/)
+- GitHub: [@aizjicod](https://github.com/aizjicod)
+- Twitter: [@aizijijr](https://twitter.com/aizijijr)
+- LinkedIn: [aiziji](https://www.linkedin.com/in/aiziji/)
 
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/aizjicod/Portfolio/issues).
+Feel free to check the [issues page](https://github.com/aizjicod/to-do-list/issues).
 
 ## Show your support
 
@@ -42,7 +51,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- thanks a lot for microverse since this README file was a template from them, and also for letting me use the template for the mobile skeleton of the portfolio.
+- thanks a lot for microverse since this README file was a template from them.
 
 ## 📝 License
 
