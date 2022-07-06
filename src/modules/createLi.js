@@ -1,5 +1,5 @@
-import edit from "./editFunction";
-import removeLi from "./removeFunction";
+import edit from './editFunction.js';
+import removeLi from './removeFunction.js';
 
 const createLi = (index) => {
   // select ul
@@ -13,7 +13,7 @@ const createLi = (index) => {
   // create span
   const input = document.createElement('input');
   input.classList.add('input');
-  input.setAttribute('readonly',true);
+  input.setAttribute('readonly', true);
   input.value = `${index.description}`;
   // create icon
   const thrashIcon = document.createElement('img');
@@ -27,15 +27,15 @@ const createLi = (index) => {
   li.appendChild(thrashIcon);
   ul.appendChild(li);
 
-  // functions 
+  // functions
 
   thrashIcon.addEventListener('click', () => {
-    removeLi(thrashIcon, index)
-  })
+    removeLi(thrashIcon, index);
+  });
 
   input.addEventListener('click', () => {
-    edit(input,index)
-  })
+    edit(input, index);
+  });
 };
 
 export default createLi;
