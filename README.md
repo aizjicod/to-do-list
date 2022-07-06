@@ -24,7 +24,7 @@
     git clone [url of the project](git@github.com:aizjicod/to-do-list.git)
 ### Install
    once you have cloned the repository open it on your code editor of preference and then follow the next steps.
-   - run on your terminal the next line of code 
+   run on your terminal the next line of code 
    `npm install`
 ### Usage
     when you have installed the dependencies, you can now run the repository in your terminal run the next line of code.
