@@ -53,6 +53,9 @@ body {
   border: none;
   list-style: none;
   padding: 0;
+  max-height: 350px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .list-container > * {
@@ -62,8 +65,16 @@ body {
   justify-content: space-between;
 }
 
-.task-container .span {
-  width: 80%;
+.task-container .input {
+  width: 75%;
+  border: none;
+  outline: none;
+}
+
+.task-container .input.active {
+  width: 75%;
+  border: 1px solid #aaa;
+  outline: 1px solid #aaa;
 }
 
 /* clear all container */
