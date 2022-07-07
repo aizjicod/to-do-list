@@ -1,3 +1,5 @@
+// --------------------------functions--------------------------------//
+
 const setStorage = (data) => {
   localStorage.setItem('task', JSON.stringify(data));
 };

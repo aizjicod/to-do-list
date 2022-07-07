@@ -5,21 +5,25 @@
 }
 
 body {
-  background: blueviolet;
+  background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%);
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* container */
 
 .todo-container {
-  margin-top: 50px;
   background: #fff;
-  width: 40%;
+  width: 70%;
+  height: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 5px 5px 5px #aaa;
+  box-shadow: 21px 22px 57px -5px rgba(110, 214, 75, 1);
+  border-radius: 8px;
 }
 
 .todo-container > * {
@@ -34,6 +38,14 @@ body {
   justify-content: space-between;
 }
 
+.todo-title {
+  color: rgba(156, 72, 234, 1);
+  background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%) left;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* form container */
 
 .form-todo {
@@ -42,6 +54,7 @@ body {
 }
 
 .form-todo .input-form {
+  width: 70%;
   border: none;
   outline: none;
   padding: 3px;
@@ -65,16 +78,28 @@ body {
   justify-content: space-between;
 }
 
+.task-container.completed {
+  background: rgba(110, 214, 75, 0.3);
+}
+
+.task-container.incorrect {
+  background: rgba(214, 75, 96, 0.3);
+}
+
 .task-container .input {
   width: 75%;
   border: none;
   outline: none;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.task-container.completed > .input {
+  text-decoration: line-through;
 }
 
 .task-container .input.active {
   width: 75%;
-  border: 1px solid #aaa;
-  outline: 1px solid #aaa;
 }
 
 /* clear all container */
@@ -87,4 +112,25 @@ body {
   border: none;
   background: inherit;
   font-size: 1.3em;
+}
+
+.clear-btn:focus,
+.clear-btn:active {
+  animation: btn-animation 0.3s;
+}
+
+@keyframes btn-animation {
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .todo-container {
+    width: 45%;
+  }
 }
