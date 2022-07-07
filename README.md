@@ -10,6 +10,10 @@
 - HTML
 - CSS
 
+## demo of the project
+
+  demo of the project [Demo](https://aizjicod.github.io/to-do-list/dist/)
+
 ## Getting Started
 
 >To get a local copy up and running follow these simple example steps.
