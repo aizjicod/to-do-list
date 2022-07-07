@@ -1,3 +1,4 @@
+import checkfunction from './cbFunction.js';
 import edit from './editFunction.js';
 import removeLi from './removeFunction.js';
 
@@ -30,12 +31,16 @@ const createLi = (index) => {
   // functions
 
   thrashIcon.addEventListener('click', () => {
-    removeLi(thrashIcon, index);
+    removeLi(index)
   });
 
   input.addEventListener('click', () => {
     edit(input, index);
   });
+
+  checkBox.addEventListener('click', () => {
+    checkfunction(li,index)
+  })
 };
 
 export default createLi;
