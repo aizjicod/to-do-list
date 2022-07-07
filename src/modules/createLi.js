@@ -1,6 +1,10 @@
+// --------------------------imports--------------------------------//
+
 import checkfunction from './cbFunction.js';
 import edit from './editFunction.js';
 import removeLi from './removeFunction.js';
+
+// --------------------------functions--------------------------------//
 
 const createLi = (index) => {
   // select ul
@@ -31,7 +35,7 @@ const createLi = (index) => {
   // functions
 
   thrashIcon.addEventListener('click', () => {
-    removeLi(index)
+    removeLi(index);
   });
 
   input.addEventListener('click', () => {
@@ -39,8 +43,8 @@ const createLi = (index) => {
   });
 
   checkBox.addEventListener('click', () => {
-    checkfunction(li,index)
-  })
+    checkfunction(li, index);
+  });
 };
 
 export default createLi;

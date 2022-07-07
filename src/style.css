@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(45deg, rgba(156,72,234,1) 0%, rgba(143,31,229,1) 37%, rgba(66,131,138,1) 79%, rgba(66,131,138,1) 100%);
+  background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 21px 22px 57px -5px rgba(110,214,75,1);
+  box-shadow: 21px 22px 57px -5px rgba(110, 214, 75, 1);
   border-radius: 8px;
 }
 
@@ -39,8 +39,8 @@ body {
 }
 
 .todo-title {
-  color:rgba(156,72,234,1) ;
-  background: linear-gradient(45deg, rgba(156,72,234,1) 0%, rgba(143,31,229,1) 37%, rgba(66,131,138,1) 79%, rgba(66,131,138,1) 100%) left;
+  color: rgba(156, 72, 234, 1);
+  background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%) left;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,12 +79,9 @@ body {
 }
 
 .task-container.completed {
-  background: rgba(110,214,75,0.3);
+  background: rgba(110, 214, 75, 0.3);
 }
 
-.task-container.completed > .input {
-  text-decoration: line-through;
-}
 .task-container.incorrect {
   background: rgba(214, 75, 96, 0.3);
 }
@@ -95,6 +92,10 @@ body {
   outline: none;
   background: transparent;
   border-radius: 8px;
+}
+
+.task-container.completed > .input {
+  text-decoration: line-through;
 }
 
 .task-container .input.active {
@@ -122,6 +123,7 @@ body {
   50% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }

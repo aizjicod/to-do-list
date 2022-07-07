@@ -1,5 +1,9 @@
+// --------------------------imports--------------------------------//
+
 import listData from './list-data.js';
 import storage from './storage.js';
+
+// --------------------------functions--------------------------------//
 
 const edit = (input, index) => {
   input.classList.toggle('active');
