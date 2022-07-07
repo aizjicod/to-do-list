@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@900&family=Rubik+Moonrocks&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
 }
 
+:root {
+  --background: linear-gradient(-45deg, #e99dcb 0%, #8099e9 100%);
+}
+
 body {
-  background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%);
+  background: var(--background);
+  background-image: url(https://uploads-ssl.webflow.com/5ec207a448d573153616868a/60e32be008c579f222f1788a_Mesh%2050.jpg);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -13,16 +21,50 @@ body {
   align-items: center;
 }
 
+.box::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #2c0570;
+  transform: translate3d(26px, 26px, 0) scale(1);
+  filter: blur(7px);
+  opacity: 1;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+/*
+* Prevents issues when the parent creates a
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+
 /* container */
 
 .todo-container {
+  position: relative;
   background: #fff;
   width: 70%;
   height: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 21px 22px 57px -5px rgba(110, 214, 75, 1);
   border-radius: 8px;
 }
 
@@ -36,14 +78,24 @@ body {
 .title-todo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .todo-title {
+  font-family: 'Rubik Moonrocks', cursive;
+  letter-spacing: 0.1em;
+  font-size: 1.8em;
+  font-weight: 900;
+  text-transform: uppercase;
   color: rgba(156, 72, 234, 1);
   background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%) left;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.reset-icon {
+  height: 24px;
 }
 
 /* form container */
@@ -86,6 +138,10 @@ body {
   background: rgba(214, 75, 96, 0.3);
 }
 
+.task-container.edit {
+  background: rgba(191, 214, 75, 0.5);
+}
+
 .task-container .input {
   width: 75%;
   border: none;
@@ -109,9 +165,14 @@ body {
 }
 
 .clear-btn {
-  border: none;
-  background: inherit;
+  font-weight: 600;
+  text-transform: capitalize;
   font-size: 1.3em;
+  border: none;
+  background: linear-gradient(45deg, rgba(156, 72, 234, 1) 0%, rgba(143, 31, 229, 1) 37%, rgba(66, 131, 138, 1) 79%, rgba(66, 131, 138, 1) 100%) left;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .clear-btn:focus,

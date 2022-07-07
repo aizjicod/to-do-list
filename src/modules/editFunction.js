@@ -7,6 +7,7 @@ import storage from './storage.js';
 
 const edit = (input, index) => {
   input.classList.toggle('active');
+  input.parentElement.classList.add('edit');
   input.removeAttribute('readonly');
   input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -15,6 +16,7 @@ const edit = (input, index) => {
       input.classList.toggle('active');
       listData[index.index - 1].description = input.value;
       storage.setStorage(listData);
+      input.parentElement.classList.remove('edit');
     }
   });
 };
